@@ -1,0 +1,66 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 260px;
+  background: rgba(40, 40, 40, 0.4);
+  animation: fade 0.2s ease;
+}
+
+.modal {
+  display: flex;
+  gap: 16px;
+  width: 548px;
+  padding: 32px;
+  border-radius: var(--radius-m);
+  background: var(--green);
+  color: var(--white);
+  animation: pop 0.25s ease;
+}
+
+.text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.message {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.close {
+  display: flex;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  transition: transform var(--transition);
+}
+
+.close:hover {
+  transform: rotate(90deg);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}

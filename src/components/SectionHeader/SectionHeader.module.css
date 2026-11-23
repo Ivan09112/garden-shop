@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.header h2 {
+  flex-shrink: 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: var(--grey-divider);
+}
+
+/* Кнопка навигации прижата к линии, как в макете */
+.button {
+  flex-shrink: 0;
+  margin-left: -32px;
+  padding: 8px 16px;
+  border: 1px solid var(--grey-divider);
+  border-radius: var(--radius-s);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.26;
+  color: var(--grey);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.button:hover {
+  background: var(--light-grey);
+}
+
+.button:active {
+  color: var(--black);
+}

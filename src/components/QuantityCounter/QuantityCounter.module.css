@@ -1,0 +1,47 @@
+.counter {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 58px;
+  flex-shrink: 0;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  border: 1px solid var(--grey-divider);
+  border-radius: var(--radius-s);
+  position: relative;
+  z-index: 1;
+  background: var(--white);
+  color: var(--grey);
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.button:hover:not(:disabled) {
+  background: var(--light-grey);
+  color: var(--black);
+}
+
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.value {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--grey-divider);
+  border-bottom: 1px solid var(--grey-divider);
+  margin: 0 -6px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}

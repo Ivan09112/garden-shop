@@ -1,0 +1,109 @@
+:root {
+  --green: #339933;
+  --green-dark: #0b710b;
+  --black: #282828;
+  --white: #ffffff;
+  --grey: #8b8b8b;
+  --grey-divider: #dddddd;
+  --light-grey: #f1f3f4;
+
+  --radius-s: 6px;
+  --radius-m: 12px;
+  --page-width: 1440px;
+  --side-padding: 40px;
+
+  --transition: 0.2s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: var(--page-width);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.3;
+  color: var(--black);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* --- Общие классы --- */
+
+.container {
+  width: 100%;
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 var(--side-padding);
+}
+
+.page {
+  padding-top: 116px;
+}
+
+.title-h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.title-h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.text-grey {
+  color: var(--grey);
+}
+
+/* Скрыть стрелки у input type=number */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
